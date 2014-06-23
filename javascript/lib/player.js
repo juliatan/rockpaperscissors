@@ -9,6 +9,7 @@ Player.prototype.picks = function(pick) {
   this.pick = pick;
 };
 
+// allows Computer player to randomly pick an option
 Player.prototype.randomlyPicks = function(array) {
   return this.pick = array[Math.floor ( Math.random() * array.length )]
 }
