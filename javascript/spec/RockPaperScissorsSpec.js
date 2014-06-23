@@ -1,5 +1,5 @@
 describe("Rock-Paper-Scissors", function() {
-  var player1, player2, game;
+  var player1, player2, game; // sets scope as local
 
   beforeEach(function() {
     player1 = new Player('Alex');
@@ -22,7 +22,7 @@ describe("Rock-Paper-Scissors", function() {
 
         player1.picks('rock');
         player2.picks('paper');
-        expect(game.winner()).toBe(player2);
+        expect(game.winner(player1.picks, player2.picks)).toBe(player2);
 
       });
 
