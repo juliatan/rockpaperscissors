@@ -48,6 +48,11 @@ Game.prototype._isSamePick = function() {
 };
 
 Game.prototype.victoryMessage = function(player1, player2) {
-  return this.player1.name + "'s " + this.player1.pick + " " + this.PAIRS[this.player1.pick][this.player2.pick] + " " + this.player2.name + "'s " + this.player2.pick
-  // return "Julia's rock kills Roi's lizard";
+  if(this.winner() === this.player1) {
+    return this.player1.name + "'s " + this.player1.pick + " " + this.PAIRS[this.player1.pick][this.player2.pick] + " " + this.player2.name + "'s " + this.player2.pick;
+  }
+  else {
+    return "Sorry, you lose";
+  }
+
 };

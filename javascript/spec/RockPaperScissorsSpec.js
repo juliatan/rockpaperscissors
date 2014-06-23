@@ -231,11 +231,51 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
     describe('Roi with rock', function() {
 
-      it('should crush Julia with lizard', function() {
+      it('should defeat Julia with lizard', function() {
 
         player1.picks('rock');
         player2.picks('lizard');
         expect(game.victoryMessage(player1.pick, player2.pick)).toBe("Roi's rock kills Julia's lizard");
+
+      });
+
+      it('should defeat Julia with scissors', function() {
+
+        player1.picks('rock');
+        player2.picks('scissors');
+        expect(game.victoryMessage(player1.pick, player2.pick)).toBe("Roi's rock crushes Julia's scissors");
+
+      });
+
+    });
+
+    describe('Roi with spock', function() {
+
+      it('should defeat Julia with scissors', function() {
+
+        player1.picks('spock');
+        player2.picks('scissors');
+        expect(game.victoryMessage(player1.pick, player2.pick)).toBe("Roi's spock smashes Julia's scissors");
+
+      });
+
+      it('should defeat Julia with rock', function() {
+
+        player1.picks('spock');
+        player2.picks('rock');
+        expect(game.victoryMessage(player1.pick, player2.pick)).toBe("Roi's spock vapourizes Julia's rock");
+
+      });
+
+    });
+
+    describe('Roi with scissors', function() {
+
+      it('should be defeated by Julia with spock', function() {
+
+        player1.picks('scissors');
+        player2.picks('spock');
+        expect(game.victoryMessage(player1, player2)).toBe("Sorry, you lose");
 
       });
 
