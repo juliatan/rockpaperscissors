@@ -218,8 +218,24 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
       it('computer player should be able to choose a random option', function() {
 
         var options = ['rock', 'paper', 'scissors', 'spock', 'lizard']
-        player1.randomlyPicks(options)
-        expect(options).toContain(player1.pick)
+        player1.randomlyPicks(options);
+        expect(options).toContain(player1.pick);
+
+      });
+
+    });
+
+  });
+
+  describe('victory messages', function() {
+
+    describe('Roi with rock', function() {
+
+      it('should crush Julia with lizard', function() {
+
+        player1.picks('rock');
+        player2.picks('lizard');
+        expect(game.victoryMessage(player1.pick, player2.pick)).toBe("Roi's rock kills Julia's lizard");
 
       });
 
