@@ -211,4 +211,20 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
   });
 
+  describe('picks', function() {
+
+    describe('random choice', function() {
+
+      it('computer player should be able to choose a random option', function() {
+
+        var options = ['rock', 'paper', 'scissors', 'spock', 'lizard']
+        player1.randomlyPicks(options)
+        expect(options).toContain(player1.pick)
+
+      });
+
+    });
+
+  });
+
 });

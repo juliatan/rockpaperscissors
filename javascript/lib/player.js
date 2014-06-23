@@ -8,3 +8,7 @@ function Player(name) {
 Player.prototype.picks = function(pick) {
   this.pick = pick;
 };
+
+Player.prototype.randomlyPicks = function(array) {
+  return this.pick = array[Math.floor ( Math.random() * array.length )]
+}
