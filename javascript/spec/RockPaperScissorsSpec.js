@@ -1,11 +1,10 @@
 describe("Rock-Paper-Scissors", function() {
+  var player1, player2, game;
 
   beforeEach(function() {
-
-    player1 = new Player();
-    player2 = new Player();
+    player1 = new Player('Alex');
+    player2 = new Player('Bob');
     game = new Game(player1, player2);
-
   });
 
   describe('winning and losing', function() {
@@ -17,7 +16,6 @@ describe("Rock-Paper-Scissors", function() {
         player1.picks('rock');
         player2.picks('scissors');
         expect(game.winner()).toBe(player1);
-
       });
 
       it('should lose to paper', function() {
