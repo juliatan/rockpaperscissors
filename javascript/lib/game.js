@@ -4,23 +4,13 @@ function Game(player1, player2) {
   this.player2 = player2;
 };
 
-// Game.prototype.PAIRS = {
-
-//   rock:     { beats: ["scissors", "lizard"], verb: ["crushes", "kills"] },
-//   paper:    { beats: ["rock", "spock"], verb: ["covers", "disproves"] },
-//   scissors: { beats: ["paper", "lizard"], verb: ["cuts", "decapitate"] },
-//   lizard:   { beats: ["spock", "paper"], verb: ["poisons", "eats"] },
-//   spock:    { beats: ["scissors", "rock"], verb: ["smashes", "vapourizes"] }
-
-// };
-
 Game.prototype.PAIRS = {
 
-  rock:     { "scissors": "crushes", "lizard": "kills" },
-  paper:    { "rock": "covers", "spock": "disproves" },
-  scissors: { "paper": "cuts", "lizard": "decapitate" },
-  lizard:   { "spock": "poisons", "paper": "eats" },
-  spock:    { "scissors": "smashes", "rock": "vapourizes" }
+  rock:     { scissors: "crushes", lizard: "kills" },
+  paper:    { rock: "covers", spock: "disproves" },
+  scissors: { paper: "cuts", lizard: "decapitate" },
+  lizard:   { spock: "poisons", paper: "eats" },
+  spock:    { scissors: "smashes", rock: "vapourizes" }
 
 };
 
@@ -29,10 +19,7 @@ Game.prototype.winner = function() {
 
   if(this._isSamePick()) return null; // remember null replaces nil
 
-  // if(this.PAIRS[this.player1.pick]["beats"].indexOf(this.player2.pick) > -1) {
-  //   return this.player1;
-  // }
-
+  // checks where player2's pick is one of the keys in the hash
   if(this.player2.pick in this.PAIRS[this.player1.pick]) {
     return this.player1;
   }
@@ -43,16 +30,24 @@ Game.prototype.winner = function() {
 
 };
 
+Game.prototype.loser = function() {
+  return (this.winner() === this.player1 ? this.player2 : this.player1);
+}
+
 Game.prototype._isSamePick = function() {
   return this.player1.pick === this.player2.pick;
 };
 
-Game.prototype.victoryMessage = function(player1, player2) {
-  if(this.winner() === this.player1) {
-    return this.player1.name + "'s " + this.player1.pick + " " + this.PAIRS[this.player1.pick][this.player2.pick] + " " + this.player2.name + "'s " + this.player2.pick;
+Game.prototype.victoryMessage = function() {
+  var message;
+
+  if(this.winner()) {
+    message = this.winner().name + "'s " + this.winner().pick + " " + this.PAIRS[this.winner().pick][this.loser().pick] + " " + this.loser().name + "'s " + this.loser().pick;
   }
   else {
-    return "Sorry, you lose";
+    message = "It's a draw";
   }
+
+  return message
 
 };
