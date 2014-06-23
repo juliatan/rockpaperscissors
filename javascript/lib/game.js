@@ -1,7 +1,10 @@
 PAIRS = {
   "rock":     { "beats": "scissors" },
   "paper":    { "beats": "rock" },
-  "scissors": { "beats": "paper" }
+  "scissors": { "beats": "paper" },
+  "lizard":   { "beats": "spock"},
+  "spock":    { "beats": "scissors"}
+
 };
 
 // defining Game class which initializes with two instace variables
