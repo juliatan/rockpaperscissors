@@ -49,7 +49,7 @@
           // Change background depending on choice of user
           $('#game_icons').css('display', 'none');
           // Change background colour of site.
-          $('body').css('background-image', 'url(images/'+game.winner().pick+'_bg.jpg)').css('background-size','cover');
+          $('body').css('background-image', 'url(images/'+game.winner().pick+'_bg.jpg)').css('-webkit-background-size','cover').css('repeat','no-repeat');
           // Display footer bar
           $('#victory_message').css('visibility', 'visible').text(game.victoryMessage()).prependTo('footer');
         });

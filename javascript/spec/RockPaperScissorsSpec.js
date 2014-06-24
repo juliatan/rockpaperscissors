@@ -203,7 +203,7 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
           return game.winner();
         });
 
-        expect(drawGameResults).toEqual([null, null, null, null, null]);
+        expect(drawGameResults).toEqual(["draw", "draw", "draw", "draw", "draw"]);
 
       });
 
