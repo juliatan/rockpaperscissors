@@ -1,5 +1,7 @@
 body {
   background-color: #27ae60;
+  margin: 0;
+  padding: 0;
 }
 /*#game_icons {
   position: fixed;
@@ -30,3 +32,11 @@ body {
   background-color:rgba(255,255,255,0.2);
   opacity: 1;
 }
+
+#victory_message {
+  background-color: #27ae60;
+  height: 220px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  visibility: hidden;
