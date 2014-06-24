@@ -10,7 +10,7 @@ Game.prototype.PAIRS = {
   paper:    { rock: "covers", spock: "disproves" },
   scissors: { paper: "cuts", lizard: "decapitate" },
   lizard:   { spock: "poisons", paper: "eats" },
-  spock:    { scissors: "smashes", rock: "vapourizes" }
+  spock:    { scissors: "smashes", rock: "vaporizes" }
 
 };
 
