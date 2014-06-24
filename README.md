@@ -20,8 +20,8 @@ Technologies used
 - HTML5
 - CSS3
 
-How to run it
--------------
+How to run the program
+----------------------
 
 ```sh
 git clone https://github.com/juliatan/rockpaperscissors

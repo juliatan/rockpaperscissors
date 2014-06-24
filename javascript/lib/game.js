@@ -42,7 +42,7 @@ Game.prototype.victoryMessage = function() {
   var message;
 
   if(this.winner()) {
-    message = this.winner().name + "'s " + this.winner().pick + " " + this.PAIRS[this.winner().pick][this.loser().pick] + " " + this.loser().name + "'s " + this.loser().pick;
+    message = this.winner().name + "'s " + this.winner().pick + " " + this._victoryVerb() + " " + this.loser().name + "'s " + this.loser().pick;
   }
   else {
     message = "It's a draw";
@@ -50,4 +50,8 @@ Game.prototype.victoryMessage = function() {
 
   return message
 
+};
+
+Game.prototype._victoryVerb = function() {
+  return this.PAIRS[this.winner().pick][this.loser().pick];
 };
