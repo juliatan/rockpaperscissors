@@ -32,7 +32,10 @@ body {
   background-color:rgba(255,255,255,0.2);
   opacity: 1;
 }
+#input_name {
 
+
+}
 #victory_message {
   background-color: #27ae60;
   height: 220px;

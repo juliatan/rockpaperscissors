@@ -17,8 +17,9 @@ Game.prototype.PAIRS = {
 // defines Game method winner
 Game.prototype.winner = function() {
 
-  if(this._isSamePick()) return "draw"; // remember null replaces nil
-
+  if(this._isSamePick()) {
+    return "draw" ; // remember null replaces nil
+  }
   // checks where player2's pick is one of the keys in the hash
   if(this.player2.pick in this.PAIRS[this.player1.pick]) {
     return this.player1;
@@ -41,17 +42,26 @@ Game.prototype._isSamePick = function() {
 Game.prototype.victoryMessage = function() {
   var message;
 
-  if(this.winner()) {
+  if(this.winner() === "draw"){
+    message = "this is a draw";
+  } else {
+
+  // if(this.winner()) {
     message = this.winner().name + " 's " + this.winner().pick + " " + this._victoryVerb() + " " + this.loser().name + "'s " + this.loser().pick;
   }
-  else {
-    message = "It's a draw";
-  }
+  // else {
+  //   message = "It's a draw";
+  // }
 
   return message
 
 };
 
 Game.prototype._victoryVerb = function() {
-  return this.PAIRS[this.winner().pick][this.loser().pick];
+  if(this.winner() === "draw"){
+    return null;
+  }
+  else {
+    return this.PAIRS[this.winner().pick][this.loser().pick];
+  }
 };
