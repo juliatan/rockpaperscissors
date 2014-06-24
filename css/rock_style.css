@@ -6,11 +6,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: #27ae60;
 }
-
 #game_icons {
   margin: auto;
   height: 200px;
@@ -18,14 +16,12 @@ body {
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
 }
-
 #game_icons img {
   border-radius: 50%;
   width: 180px;
   opacity: .5;
   transition: background .75s ease;
 }
-
 #game_icons img:hover {
   background-color:rgba(255,255,255,0.2);
   opacity: 1;
@@ -42,13 +38,13 @@ body {
   text-shadow: 2px 2px 0px #0e3655;
   letter-spacing: 2px;
   line-height: 1.5em;
+  opacity: .25;
 }
 #results li {
   display: inline;
   margin-left: 15px;
   margin-right: 15px;
 }
-
 #victory_message {
   padding: 25px 0px 25px 0px;
   position: absolute;
