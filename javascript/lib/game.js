@@ -17,7 +17,7 @@ Game.prototype.PAIRS = {
 // defines Game method winner
 Game.prototype.winner = function() {
 
-  if(this._isSamePick()) return null; // remember null replaces nil
+  if(this._isSamePick()) return "draw"; // remember null replaces nil
 
   // checks where player2's pick is one of the keys in the hash
   if(this.player2.pick in this.PAIRS[this.player1.pick]) {
