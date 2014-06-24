@@ -40,4 +40,4 @@ open SpecRunner.html
 - Refresh browser to run test
 
 [rules of the game]:https://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-spock
-[Roi](https://github.com/roidriscoll)
+[Roi]:https://github.com/roidriscoll
