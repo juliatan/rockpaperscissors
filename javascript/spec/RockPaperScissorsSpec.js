@@ -263,7 +263,7 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
         player1.picks('spock');
         player2.picks('rock');
-        expect(game.victoryMessage()).toBe("Roi's spock vapourizes Julia's rock");
+        expect(game.victoryMessage()).toBe("Roi's spock vaporizes Julia's rock");
 
       });
 

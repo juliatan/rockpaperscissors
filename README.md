@@ -2,7 +2,8 @@ Rock, Paper, Scissors, Lizard, Spock
 ====================================
 
 This was the project set for Week 7 at Makers Academy - the implementation of 
-a playable game in the browser of Rock Paper Scissors Lizard Spock. 
+a playable game in the browser of Rock Paper Scissors Lizard Spock. This code
+was written with my pair programming partner [Roi].
 
 The aim of the project was to introduce us to:
 
@@ -39,3 +40,4 @@ open SpecRunner.html
 - Refresh browser to run test
 
 [rules of the game]:https://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-spock
+[Roi](https://github.com/roidriscoll)
