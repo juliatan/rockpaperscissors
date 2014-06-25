@@ -43,7 +43,7 @@ Game.prototype.victoryMessage = function() {
   var message;
 
   if(this.winner() === "draw"){
-    message = "this is a draw";
+    message = "It's a draw!";
   } else {
 
   // if(this.winner()) {
