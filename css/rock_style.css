@@ -9,6 +9,10 @@ html, body {
 body {
   background-color: #27ae60;
 }
+footer span {
+  font-size: 15px;
+  margin-top: 20px;
+}
 #game_icons {
   margin: auto;
   height: 200px;
@@ -26,7 +30,25 @@ body {
   background-color:rgba(255,255,255,0.2);
   opacity: 1;
 }
-#results, #victory_message {
+input {
+  text-align: center;
+  width: 500px;
+  background-color: #27ae60;
+  margin-top: 140px;
+  font-size:30px;
+  border: none;
+  border-bottom: dashed 2px #FFF;
+  outline: none;
+  color: #FFF;
+  padding: .2em;
+  opacity: .5;
+}
+::-webkit-input-placeholder { color: #FFF; }
+:-moz-placeholder           { color: #FFF; }
+::-moz-placeholder          { color: #FFF; }
+:-ms-input-placeholder      { color: #FFF; }
+
+#results, #victory_message, input {
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
   list-style: none;
