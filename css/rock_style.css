@@ -47,7 +47,10 @@ input {
 :-moz-placeholder           { color: #FFF; }
 ::-moz-placeholder          { color: #FFF; }
 :-ms-input-placeholder      { color: #FFF; }
-
+input:focus::-webkit-input-placeholder
+{
+    color: transparent;
+}
 #results, #victory_message, input {
   font-family: 'Lato', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
