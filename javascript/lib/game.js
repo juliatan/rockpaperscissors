@@ -39,22 +39,26 @@ Game.prototype._isSamePick = function() {
   return this.player1.pick === this.player2.pick;
 };
 
-Game.prototype.victoryMessage = function() {
+Game.prototype.victoryMessage1 = function() {
   var message;
 
   if(this.winner() === "draw"){
     message = "It's a draw!";
   } else {
-
-  // if(this.winner()) {
-    message = this.winner().name + "'s " + this.winner().pick + " " + this._victoryVerb() + " " + this.loser().name + "'s " + this.loser().pick;
+    message = this.winner().name + "'s " + this.winner().pick + " " + this._victoryVerb();
   }
-  // else {
-  //   message = "It's a draw";
-  // }
-
   return message
+};
 
+Game.prototype.victoryMessage2 = function() {
+  var message;
+
+  if(this.winner() === "draw") {
+    return "";
+  } else {
+    message = this.loser().name + "'s " + this.loser().pick;
+  }
+  return message
 };
 
 Game.prototype._victoryVerb = function() {

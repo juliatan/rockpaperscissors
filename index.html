@@ -20,7 +20,11 @@
     </ul>
 
     <footer id="victory_message">
+    
+
     </footer>
+
+
 
     <script src="javascript/lib/game.js" type="text/javascript"></script>
     <script src="javascript/lib/player.js" type="text/javascript"></script>
@@ -56,14 +60,17 @@
               // Change background colour of site.
               $('body').css('background-image', 'url(images/'+game.winner().pick+'_bg.jpg)').css('-webkit-background-size','cover').css('repeat','no-repeat');
               // Display footer bar
-              $('#victory_message').css('visibility', 'visible').text(game.victoryMessage()).prependTo('footer');
+              $('#victory_message').css('visibility', 'visible').text(game.victoryMessage1()).appendTo('#victory_message');
+              $('#victory_message').append('<br>');
+              $('#victory_message').append(game.victoryMessage2());
+              $('#victory_message').append('<br><span>Click here to try again</span>');
             });
 
             $('footer').on('click', function(){
               $('body').css('background-image', 'none');
               $('#game_icons').css('display', 'initial');
               $('input').css('display', 'none');
-              $('<li>' + game.victoryMessage() + '</li>').prependTo('#results').slideDown();
+              $('<li>' + game.victoryMessage1() + " " + game.victoryMessage2()+ '</li>').prependTo('#results').slideDown();
               $('li:gt(4)').fadeOut(function(){
                 $(this).remove();
               });
