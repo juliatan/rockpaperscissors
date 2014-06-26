@@ -16,7 +16,6 @@ Game.prototype.PAIRS = {
 
 // defines Game method winner
 Game.prototype.winner = function() {
-
   if(this._isSamePick()) {
     return "draw" ; // remember null replaces nil
   }
@@ -24,11 +23,9 @@ Game.prototype.winner = function() {
   if(this.player2.pick in this.PAIRS[this.player1.pick]) {
     return this.player1;
   }
-
   else {
     return this.player2;
   }
-
 };
 
 Game.prototype.loser = function() {
@@ -37,11 +34,11 @@ Game.prototype.loser = function() {
 
 Game.prototype._isSamePick = function() {
   return this.player1.pick === this.player2.pick;
+  debugger
 };
 
 Game.prototype.victoryMessage1 = function() {
   var message;
-
   if(this.winner() === "draw"){
     message = "It's a draw!";
   } else {
@@ -52,7 +49,6 @@ Game.prototype.victoryMessage1 = function() {
 
 Game.prototype.victoryMessage2 = function() {
   var message;
-
   if(this.winner() === "draw") {
     return "";
   } else {
