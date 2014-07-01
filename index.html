@@ -66,7 +66,7 @@
               // Hide form
               $('input').css('display', 'none');
               // Change background colour of site.
-              $('body').css('background-image', 'url(images/'+game.winner().pick+'_bg.jpg)').css('-webkit-background-size','cover').css('repeat','no-repeat').addClass('bgShown');
+              $('body').css('background-image', 'url(images/'+game.winner().pick+'_bg.jpg)').css('-webkit-background-size','cover').css('background-position','center center').css('repeat','no-repeat').addClass('bgShown');
               // Display footer bar
               $('#victory_message').css('visibility', 'visible').append('<p>').text(game.victoryMessage1()).appendTo('#victory_message');
 
