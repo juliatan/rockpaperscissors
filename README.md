@@ -5,7 +5,7 @@ This was the project set for Week 7 at Makers Academy - the implementation of
 a playable game in the browser of Rock Paper Scissors Lizard Spock. This code
 was written with my pair programming partner [Roi].
 
-The aim of the project was to introduce us to:
+The aim of the project was to introduce us to the Javascript language and related technologies:
 
 - Javascript
 - jQuery
