@@ -235,7 +235,8 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
         player1.picks('rock');
         player2.picks('lizard');
-        expect(game.victoryMessage()).toBe("Roi's rock kills Julia's lizard");
+        expect(game.victoryMessage1()).toBe("Roi's rock kills");
+        expect(game.victoryMessage2()).toBe("Julia's lizard")
 
       });
 
@@ -243,7 +244,8 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
         player1.picks('rock');
         player2.picks('scissors');
-        expect(game.victoryMessage()).toBe("Roi's rock crushes Julia's scissors");
+        expect(game.victoryMessage1()).toBe("Roi's rock crushes");
+        expect(game.victoryMessage2()).toBe("Julia's scissors");
 
       });
 
@@ -255,7 +257,8 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
         player1.picks('spock');
         player2.picks('scissors');
-        expect(game.victoryMessage()).toBe("Roi's spock smashes Julia's scissors");
+        expect(game.victoryMessage1()).toBe("Roi's spock smashes");
+        expect(game.victoryMessage2()).toBe("Julia's scissors");
 
       });
 
@@ -263,7 +266,8 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
         player1.picks('spock');
         player2.picks('rock');
-        expect(game.victoryMessage()).toBe("Roi's spock vaporizes Julia's rock");
+        expect(game.victoryMessage1()).toBe("Roi's spock vaporizes");
+        expect(game.victoryMessage2()).toBe("Julia's rock");
 
       });
 
@@ -275,7 +279,8 @@ describe("Rock-Paper-Scissors-Lizard-Spock", function() {
 
         player1.picks('scissors');
         player2.picks('spock');
-        expect(game.victoryMessage()).toBe("Julia's spock smashes Roi's scissors");
+        expect(game.victoryMessage1()).toBe("Julia's spock smashes");
+        expect(game.victoryMessage2()).toBe("Roi's scissors");
 
       });
 
