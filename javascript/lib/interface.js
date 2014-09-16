@@ -11,6 +11,14 @@ function hideResult(game) {
 
 // On document load,
 $(document).ready(function(){
+
+  $.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+    }
+  }
+  $.preloadImages("hoverimage1.jpg","hoverimage2.jpg");
+
   // Once field input_name has registered the enter key
   $('#input_name').keypress(function (e) {
     if (e.which == 13) {
