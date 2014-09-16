@@ -14,10 +14,11 @@ $(document).ready(function(){
 
   $.preloadImages = function() {
   for (var i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
     $("<img />").attr("src", arguments[i]);
     }
   }
-  $.preloadImages("hoverimage1.jpg","hoverimage2.jpg");
+  $.preloadImages("images/undefined_bg.jpg","images/paper_bg.jpg","images/scissors_bg.jpg","images/rock_bg.jpg","images/spock_bg.jpg","images/lizard_bg.jpg");
 
   // Once field input_name has registered the enter key
   $('#input_name').keypress(function (e) {
